@@ -14,6 +14,17 @@
 		CEED4A2920E38B6F007C02E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEED4A2720E38B6F007C02E5 /* LaunchScreen.storyboard */; };
 		CEED4A3420E38B6F007C02E5 /* DynamicTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A3320E38B6F007C02E5 /* DynamicTableTests.swift */; };
 		CEED4A4220E38F65007C02E5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEED4A4120E38F65007C02E5 /* Alamofire.framework */; };
+		CEED4A5120E3928C007C02E5 /* ItemListScenePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A4B20E3928C007C02E5 /* ItemListScenePresenter.swift */; };
+		CEED4A5220E3928C007C02E5 /* ItemListSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A4C20E3928C007C02E5 /* ItemListSceneViewController.swift */; };
+		CEED4A5320E3928C007C02E5 /* ItemListSceneWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A4D20E3928C007C02E5 /* ItemListSceneWorker.swift */; };
+		CEED4A5420E3928C007C02E5 /* ItemListSceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A4E20E3928C007C02E5 /* ItemListSceneRouter.swift */; };
+		CEED4A5520E3928C007C02E5 /* ItemListSceneModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A4F20E3928C007C02E5 /* ItemListSceneModels.swift */; };
+		CEED4A5620E3928C007C02E5 /* ItemListSceneInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A5020E3928C007C02E5 /* ItemListSceneInteractor.swift */; };
+		CEED4A5920E392F6007C02E5 /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A5720E392F6007C02E5 /* ServiceProtocols.swift */; };
+		CEED4A5A20E392F6007C02E5 /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A5820E392F6007C02E5 /* ItemService.swift */; };
+		CEED4A5C20E39310007C02E5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A5B20E39310007C02E5 /* Item.swift */; };
+		CEED4A6020E39391007C02E5 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A5F20E39391007C02E5 /* NetworkRouter.swift */; };
+		CEED4A6220E393A8007C02E5 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A6120E393A8007C02E5 /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +50,17 @@
 		CEED4A3520E38B6F007C02E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEED4A3F20E38F54007C02E5 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
 		CEED4A4120E38F65007C02E5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		CEED4A4B20E3928C007C02E5 /* ItemListScenePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListScenePresenter.swift; sourceTree = "<group>"; };
+		CEED4A4C20E3928C007C02E5 /* ItemListSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListSceneViewController.swift; sourceTree = "<group>"; };
+		CEED4A4D20E3928C007C02E5 /* ItemListSceneWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListSceneWorker.swift; sourceTree = "<group>"; };
+		CEED4A4E20E3928C007C02E5 /* ItemListSceneRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListSceneRouter.swift; sourceTree = "<group>"; };
+		CEED4A4F20E3928C007C02E5 /* ItemListSceneModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListSceneModels.swift; sourceTree = "<group>"; };
+		CEED4A5020E3928C007C02E5 /* ItemListSceneInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemListSceneInteractor.swift; sourceTree = "<group>"; };
+		CEED4A5720E392F6007C02E5 /* ServiceProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocols.swift; sourceTree = "<group>"; };
+		CEED4A5820E392F6007C02E5 /* ItemService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
+		CEED4A5B20E39310007C02E5 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CEED4A5F20E39391007C02E5 /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		CEED4A6120E393A8007C02E5 /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +104,12 @@
 		CEED4A1D20E38B6D007C02E5 /* DynamicTable */ = {
 			isa = PBXGroup;
 			children = (
+				CEED4A4920E3919B007C02E5 /* Scenes */,
+				CEED4A4820E3918E007C02E5 /* Workers */,
+				CEED4A4720E39175007C02E5 /* Services */,
+				CEED4A4620E39169007C02E5 /* Models */,
+				CEED4A4520E39158007C02E5 /* Managers */,
+				CEED4A4420E39140007C02E5 /* Utilities */,
 				CEED4A1E20E38B6D007C02E5 /* AppDelegate.swift */,
 				CEED4A2020E38B6D007C02E5 /* ViewController.swift */,
 				CEED4A2220E38B6D007C02E5 /* Main.storyboard */,
@@ -108,6 +136,83 @@
 				CEED4A3F20E38F54007C02E5 /* Alamofire.framework.dSYM */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEED4A4420E39140007C02E5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CEED4A6120E393A8007C02E5 /* CustomError.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CEED4A4520E39158007C02E5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				CEED4A5D20E3935B007C02E5 /* NetworkManager */,
+				CEED4A5E20E39373007C02E5 /* DatabaseManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CEED4A4620E39169007C02E5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEED4A5B20E39310007C02E5 /* Item.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEED4A4720E39175007C02E5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEED4A5820E392F6007C02E5 /* ItemService.swift */,
+				CEED4A5720E392F6007C02E5 /* ServiceProtocols.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CEED4A4820E3918E007C02E5 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		CEED4A4920E3919B007C02E5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CEED4A4A20E39241007C02E5 /* ItemListScene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CEED4A4A20E39241007C02E5 /* ItemListScene */ = {
+			isa = PBXGroup;
+			children = (
+				CEED4A4B20E3928C007C02E5 /* ItemListScenePresenter.swift */,
+				CEED4A4D20E3928C007C02E5 /* ItemListSceneWorker.swift */,
+				CEED4A4E20E3928C007C02E5 /* ItemListSceneRouter.swift */,
+				CEED4A4F20E3928C007C02E5 /* ItemListSceneModels.swift */,
+				CEED4A4C20E3928C007C02E5 /* ItemListSceneViewController.swift */,
+				CEED4A5020E3928C007C02E5 /* ItemListSceneInteractor.swift */,
+			);
+			path = ItemListScene;
+			sourceTree = "<group>";
+		};
+		CEED4A5D20E3935B007C02E5 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				CEED4A5F20E39391007C02E5 /* NetworkRouter.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		CEED4A5E20E39373007C02E5 /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DatabaseManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,8 +334,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEED4A5220E3928C007C02E5 /* ItemListSceneViewController.swift in Sources */,
+				CEED4A5320E3928C007C02E5 /* ItemListSceneWorker.swift in Sources */,
+				CEED4A6220E393A8007C02E5 /* CustomError.swift in Sources */,
+				CEED4A5420E3928C007C02E5 /* ItemListSceneRouter.swift in Sources */,
 				CEED4A2120E38B6D007C02E5 /* ViewController.swift in Sources */,
+				CEED4A5A20E392F6007C02E5 /* ItemService.swift in Sources */,
+				CEED4A6020E39391007C02E5 /* NetworkRouter.swift in Sources */,
+				CEED4A5620E3928C007C02E5 /* ItemListSceneInteractor.swift in Sources */,
+				CEED4A5C20E39310007C02E5 /* Item.swift in Sources */,
 				CEED4A1F20E38B6D007C02E5 /* AppDelegate.swift in Sources */,
+				CEED4A5920E392F6007C02E5 /* ServiceProtocols.swift in Sources */,
+				CEED4A5520E3928C007C02E5 /* ItemListSceneModels.swift in Sources */,
+				CEED4A5120E3928C007C02E5 /* ItemListScenePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
