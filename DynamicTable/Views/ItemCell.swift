@@ -22,7 +22,20 @@ class ItemCell: UITableViewCell {
       guard let unwrappedItem = itemModel else { return }
       
       if let urlString = unwrappedItem.imageHref {
-        itemImageView.sd_setImage(with: URL(string: urlString), placeholderImage: UIImage(named: "placeholder"))
+      //  itemImageView.sd_setImage(with: URL(string: urlString), placeholderImage: UIImage(named: "placeholder"))
+        itemImageView.sd_setImage(with: URL(string: urlString), placeholderImage:UIImage(named: "placeholder") , options: SDWebImageOptions.delayPlaceholder) { (image, error, cacheType, url) in
+         if error != nil
+         {
+           self.itemImageView.image = UIImage(named: "placeholder")
+         }else
+         {
+            if let image = image
+            {
+              self.itemImageView.image = image
+            }
+          }
+        }
+        
       }
       //now update the cell UI with this item model
       if let titleText = unwrappedItem.title, titleText != "" {
@@ -41,3 +54,5 @@ class ItemCell: UITableViewCell {
   }
 
 }
+
+
