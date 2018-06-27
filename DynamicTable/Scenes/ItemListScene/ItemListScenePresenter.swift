@@ -26,7 +26,7 @@ class ItemListScenePresenter: ItemListScenePresentationLogic
   
   func presentItemCollectionResponseModel(response: ItemListScene.ItemList.Response)
   {
-    let viewModel = ItemListScene.ItemList.ViewModel(itemArray: response.responseModel.rows)
+    let viewModel = ItemListScene.ItemList.ViewModel(title: response.responseModel.title, itemArray: response.responseModel.rows)
     viewController?.displayItems(viewModel: viewModel)
   }
   

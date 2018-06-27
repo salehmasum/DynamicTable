@@ -29,6 +29,7 @@ class ItemService: LoadItemProtocol
               let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
               let jsonDic = object as! NSDictionary
               let itemArray = jsonDic.object(forKey: "rows") as! NSArray
+              let title     = jsonDic.object(forKey: "title") as? String
               var items = [Item]()
               for dict in itemArray
               {
@@ -41,7 +42,7 @@ class ItemService: LoadItemProtocol
                 items.append(itemObject)
               }
               
-              let itemCollection = ItemCollection(title: "", rows: items)
+              let itemCollection = ItemCollection(title: title, rows: items)
               
               completionHandler(itemCollection, nil)
               

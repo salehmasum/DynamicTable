@@ -18,7 +18,7 @@ protocol ItemListSceneDisplayLogic: class
   func presentError(error: Error)
 }
 
-class ItemListSceneViewController: UIViewController, ItemListSceneDisplayLogic, UITableViewDataSource
+class ItemListSceneViewController: UIViewController, ItemListSceneDisplayLogic, UITableViewDataSource, UITableViewDelegate
 {
   var interactor: ItemListSceneBusinessLogic?
   var router: (NSObjectProtocol & ItemListSceneRoutingLogic & ItemListSceneDataPassing)?
@@ -71,6 +71,10 @@ class ItemListSceneViewController: UIViewController, ItemListSceneDisplayLogic, 
   {
     super.viewDidLoad()
     tableView.dataSource = self
+    tableView.delegate   = self
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.estimatedRowHeight = 140
+    tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
     setupRefreshControl()
     requestToLoadItemList()
   }
@@ -107,9 +111,17 @@ class ItemListSceneViewController: UIViewController, ItemListSceneDisplayLogic, 
   {
     self.refreshControl.endRefreshing()
     UIApplication.shared.isNetworkActivityIndicatorVisible = false
-    print(viewModel)
     self.viewModel = viewModel
+    displayTitle(viewModel: viewModel)
     self.tableView.reloadData()
+  }
+  
+  func displayTitle(viewModel: ItemListScene.ItemList.ViewModel)
+  {
+    if let title = viewModel.title
+    {
+      self.title = title
+    }
   }
   
   func presentError(error: Error)
@@ -123,18 +135,21 @@ class ItemListSceneViewController: UIViewController, ItemListSceneDisplayLogic, 
   //MARK: collectionview data source
   func numberOfSections(in tableView: UITableView) -> Int
   {
-    return 0
+    return 1
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return viewModel!.itemArray.count
+    guard let viewModel = viewModel else { return 0 }
+    return viewModel.itemArray.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-    return cell!
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ItemCell
+    let currentItem = viewModel!.itemArray[indexPath.row]
+    cell.itemModel = currentItem
+    return cell
   }
-  
+
     
 }
 

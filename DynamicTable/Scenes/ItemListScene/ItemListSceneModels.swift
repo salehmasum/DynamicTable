@@ -30,6 +30,7 @@ enum ItemListScene
     
     struct ViewModel
     {
+      var title: String?
       var itemArray: [Item]
     }
     

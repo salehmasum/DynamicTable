@@ -25,6 +25,8 @@
 		CEED4A5C20E39310007C02E5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A5B20E39310007C02E5 /* Item.swift */; };
 		CEED4A6020E39391007C02E5 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A5F20E39391007C02E5 /* NetworkRouter.swift */; };
 		CEED4A6220E393A8007C02E5 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A6120E393A8007C02E5 /* CustomError.swift */; };
+		CEED4A6520E3AB4E007C02E5 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A6420E3AB4E007C02E5 /* ItemCell.swift */; };
+		CEED4A6720E3CABF007C02E5 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEED4A6620E3CABF007C02E5 /* SDWebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		CEED4A5B20E39310007C02E5 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CEED4A5F20E39391007C02E5 /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		CEED4A6120E393A8007C02E5 /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		CEED4A6420E3AB4E007C02E5 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		CEED4A6620E3CABF007C02E5 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEED4A4220E38F65007C02E5 /* Alamofire.framework in Frameworks */,
+				CEED4A6720E3CABF007C02E5 /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,8 +115,9 @@
 				CEED4A4620E39169007C02E5 /* Models */,
 				CEED4A4520E39158007C02E5 /* Managers */,
 				CEED4A4420E39140007C02E5 /* Utilities */,
-				CEED4A1E20E38B6D007C02E5 /* AppDelegate.swift */,
+				CEED4A6320E3AAFE007C02E5 /* Views */,
 				CEED4A2020E38B6D007C02E5 /* ViewController.swift */,
+				CEED4A1E20E38B6D007C02E5 /* AppDelegate.swift */,
 				CEED4A2220E38B6D007C02E5 /* Main.storyboard */,
 				CEED4A2520E38B6F007C02E5 /* Assets.xcassets */,
 				CEED4A2720E38B6F007C02E5 /* LaunchScreen.storyboard */,
@@ -132,6 +138,7 @@
 		CEED4A3E20E38F54007C02E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEED4A6620E3CABF007C02E5 /* SDWebImage.framework */,
 				CEED4A4120E38F65007C02E5 /* Alamofire.framework */,
 				CEED4A3F20E38F54007C02E5 /* Alamofire.framework.dSYM */,
 			);
@@ -213,6 +220,14 @@
 			children = (
 			);
 			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		CEED4A6320E3AAFE007C02E5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEED4A6420E3AB4E007C02E5 /* ItemCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +335,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 			);
 			outputPaths = (
 			);
@@ -338,6 +354,7 @@
 				CEED4A5320E3928C007C02E5 /* ItemListSceneWorker.swift in Sources */,
 				CEED4A6220E393A8007C02E5 /* CustomError.swift in Sources */,
 				CEED4A5420E3928C007C02E5 /* ItemListSceneRouter.swift in Sources */,
+				CEED4A6520E3AB4E007C02E5 /* ItemCell.swift in Sources */,
 				CEED4A2120E38B6D007C02E5 /* ViewController.swift in Sources */,
 				CEED4A5A20E392F6007C02E5 /* ItemService.swift in Sources */,
 				CEED4A6020E39391007C02E5 /* NetworkRouter.swift in Sources */,
@@ -513,6 +530,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = DynamicTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -535,6 +553,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = DynamicTable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
