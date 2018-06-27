@@ -13,6 +13,7 @@
 		CEED4A2620E38B6F007C02E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEED4A2520E38B6F007C02E5 /* Assets.xcassets */; };
 		CEED4A2920E38B6F007C02E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEED4A2720E38B6F007C02E5 /* LaunchScreen.storyboard */; };
 		CEED4A3420E38B6F007C02E5 /* DynamicTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED4A3320E38B6F007C02E5 /* DynamicTableTests.swift */; };
+		CEED4A4220E38F65007C02E5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEED4A4120E38F65007C02E5 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		CEED4A2F20E38B6F007C02E5 /* DynamicTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEED4A3320E38B6F007C02E5 /* DynamicTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicTableTests.swift; sourceTree = "<group>"; };
 		CEED4A3520E38B6F007C02E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEED4A3F20E38F54007C02E5 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = "<group>"; };
+		CEED4A4120E38F65007C02E5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEED4A4220E38F65007C02E5 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +66,7 @@
 				CEED4A1D20E38B6D007C02E5 /* DynamicTable */,
 				CEED4A3220E38B6F007C02E5 /* DynamicTableTests */,
 				CEED4A1C20E38B6D007C02E5 /* Products */,
+				CEED4A3E20E38F54007C02E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +101,15 @@
 			path = DynamicTableTests;
 			sourceTree = "<group>";
 		};
+		CEED4A3E20E38F54007C02E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEED4A4120E38F65007C02E5 /* Alamofire.framework */,
+				CEED4A3F20E38F54007C02E5 /* Alamofire.framework.dSYM */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +120,7 @@
 				CEED4A1720E38B6D007C02E5 /* Sources */,
 				CEED4A1820E38B6D007C02E5 /* Frameworks */,
 				CEED4A1920E38B6D007C02E5 /* Resources */,
+				CEED4A4320E38F76007C02E5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -191,6 +206,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CEED4A4320E38F76007C02E5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEED4A1720E38B6D007C02E5 /* Sources */ = {
@@ -360,6 +392,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5JCS9BP69;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DynamicTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +414,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5JCS9BP69;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DynamicTable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
